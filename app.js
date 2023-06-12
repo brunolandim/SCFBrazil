@@ -8,7 +8,7 @@ const teste3 = require("./teste3");
 const teste4 = require("./teste4");
 const teste5 = require("./teste5");
 const teste6 = require('./teste6');
-const checkPermission = require('./middleware/checkPermission');
+const grantPermission = require('./middleware/grantPermission');
 
 
 app.set('view engine', 'jade');
@@ -33,8 +33,8 @@ app.get('/', function(req, res){
 app.get("/user", teste1.getUser);
 app.get("/users", teste1.getUsers);
 app.post("/users", teste2)
-app.delete("/users",(req,res,next) => checkPermission(req,res,next), teste3)
-app.put("/users",(req,res,next) => checkPermission(req,res,next), teste4)
+app.delete("/users", grantPermission, teste3)
+app.put("/users", grantPermission, teste4)
 app.get("/users/access", teste5);
 app.post("/user/login", teste6)
 

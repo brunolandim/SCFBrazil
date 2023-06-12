@@ -1,5 +1,6 @@
 module.exports = function (req, res, next) {
-    const { user } = req
+    const { user } = req.authorization
+    console.log(`REQ`,req)
   
     if (user.role === 'admin') {
       next();
