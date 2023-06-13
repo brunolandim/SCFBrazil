@@ -41,3 +41,6 @@ Retorne quantas vezes determinado usuário foi lido no teste1.
 
 Definina uma forma de criar permissão para o usuario, defina se o usuário pode deletar ou atualizar usuários. Crie um middleware para validar essas permissões e adicione no teste4 e teste3.
 
+O requisito 6 foi implementado simulando um login que gera um token e a partir deste token é possível realizar ações de atualização e exclusão de dados nos testes3 e teste4
+
+
