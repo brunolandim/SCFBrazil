@@ -8,6 +8,4 @@ module.exports = function(req, res){
     return res.status(201).json(newUser);
 };
 
-const generateId = () => {
-    return data.length + 1
-}
+const generateId = () => data.length + 1
